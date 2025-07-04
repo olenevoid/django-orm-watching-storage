@@ -8,10 +8,7 @@ django.setup()
 from datacenter.models import Passcard  # noqa: E402
 
 if __name__ == '__main__':
-    # Программируем здесь
-    first = Passcard.objects.first()
-    print('owner_name', first)
-    for field in first._meta.get_fields():
-        if not field.is_relation:
-            print(field.verbose_name, getattr(first, field.name))
+    # Программируем здесь    
+    active_passcards = Passcard.objects.filter(is_active=True).all()
     print('Количество пропусков:', Passcard.objects.count())  # noqa: T001
+    print('Количество активных пропусков:', len(active_passcards))
