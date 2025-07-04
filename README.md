@@ -26,11 +26,11 @@ pip install -r requirements.txt
 
 Для корректной работы скриптов создайте файл с именем `.env` и поместите в него следующие данные:
 
-* HOST – адрес хоста, на котором находится база PostgreSQL
-* PORT – номер порта хоста, на котором находится база PostgreSQL
-* NAME – имя базы данных, к которой надо подключиться
-* USER – имя пользователя
-* PASSWORD – пароль
+* DB_HOST – адрес хоста, на котором находится база PostgreSQL
+* DB_PORT – номер порта хоста, на котором находится база PostgreSQL
+* DB_NAME – имя базы данных, к которой надо подключиться
+* DB_USER – имя пользователя
+* DB_PASSWORD – пароль
 * SECRET_KEY – ключ для шифрования подключения
 
 Файлы с расширением `.env` поддерживают комментарии. Они начинаются знаком `#`. Вы можете указать туда дополнительную информацию для себя.
@@ -39,11 +39,11 @@ pip install -r requirements.txt
 
 ```
 #Подключение к БД
-HOST=some.address.com
-PORT=9999
-NAME=db_name
-USER=username
-PASSWORD=password
+DB_HOST=some.address.com
+DB_PORT=9999
+DB_NAME=db_name
+DB_USER=username
+DB_PASSWORD=password
 #Прочее
 SECRET_KEY=your_secret_key
 ```
